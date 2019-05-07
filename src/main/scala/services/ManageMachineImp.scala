@@ -4,6 +4,7 @@ import model._
 
 class ManageMachineImp extends ManageMachine {
   override def addNewItem(manager: Manager, item: String, quantity: Int): Unit = {
+    //Database.foodItems.filter(p => p.item == item).map(p => p.quantity.+(quantity))
     Database.foodItems += FoodItem(item, quantity)
   }
 
