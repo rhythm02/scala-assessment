@@ -10,6 +10,8 @@ class ManageMachineImpTest extends FunSuite with BeforeAndAfter {
 
   test("testAddNewItem") {
     manageMachineImp addNewItem(mgr, "Chips", 10)
+    manageMachineImp addNewItem(mgr, "Chips", 10)
+    println(Database.foodItems)
     assert(Database.foodItems.contains(FoodItem("Chips", 10)))
   }
 
